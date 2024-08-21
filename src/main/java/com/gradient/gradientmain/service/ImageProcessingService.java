@@ -1,5 +1,6 @@
 package com.gradient.gradientmain.service;
 
+import org.jetbrains.annotations.NotNull;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.springframework.stereotype.Service;
@@ -15,9 +16,9 @@ import java.util.List;
 @Service
 public class ImageProcessingService {
 
-    private static final String UPLOAD_DIR = "uploads/";
+    private static final String UPLOAD_DIR = "C:\\Users\\Kieran McDougall\\IdeaProjects\\gradient-main\\src\\main\\resources\\images";
 
-    public String saveImage(MultipartFile file) throws IOException {
+    public String saveImage(@NotNull MultipartFile file) throws IOException {
         String filename = file.getOriginalFilename();
         Path path = Paths.get(UPLOAD_DIR + filename);
         Files.createDirectories(path.getParent());

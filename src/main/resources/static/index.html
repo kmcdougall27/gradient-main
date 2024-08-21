@@ -8,9 +8,17 @@
     <title>Gradient</title>
 </head>
 <body>
-<div id="message">
+<div class="message">
     <h1>gradient</h1>
 </div>
+<div class="upload-image">
+    <h2>Image Upload Test</h2>
+    <form action="http://localhost:8080/api/images/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <input type="submit" value="Upload Image">
+    </form>
+</div>
+
 <div class="main-photo-grid">
     <div class="photo-row">
         <img class="photo-row-img" src="../images/green-grey.jpeg" alt="">

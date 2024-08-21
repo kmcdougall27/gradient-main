@@ -22,7 +22,7 @@ public class ImageProcessingController {
     public ResponseEntity<String> uploadImage(@RequestParam("file") MultipartFile file) {
         try {
             String filename = imageProcessingService.saveImage(file);
-            imageProcessingService.analyzeColors(filename);
+//            imageProcessingService.analyzeColors(filename);
             return ResponseEntity.ok("Image uploaded and analyzed successfully: " + filename);
         } catch (IOException e) {
             return ResponseEntity.badRequest().body("Failed to upload image: " + e.getMessage());

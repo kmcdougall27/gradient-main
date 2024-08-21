@@ -2,9 +2,15 @@ html {
     background-color: beige;
 }
 
-#message {
+.message {
     display: flex;
     justify-content: center;
+}
+
+.upload-image {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
 }
 
 .photo-grid {
